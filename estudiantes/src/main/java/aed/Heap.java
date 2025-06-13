@@ -1,6 +1,8 @@
 package aed;
 import java.util.ArrayList;
 
+
+
 public class Heap<T extends Comparable<T>>{
     private ArrayList<Elemento> datos;
 
@@ -141,5 +143,9 @@ public class Heap<T extends Comparable<T>>{
         siftDown(indice);
     }
     
+    public T obtenerValor(HandleHeap handle){
+        int indice = handle.indice;
+        return datos.get(indice).valor;
+    }
 
 }

@@ -1,6 +1,8 @@
 package aed;
 
-public class TransaccionConHandle {
+public class TransaccionConHandle implements Comparable<TransaccionConHandle> {
+   
+    // transaccion con su respectivo handle 
     private Transaccion tx;
     private ListaEnlazada<Transaccion>.HandleLista handle;
 
@@ -8,6 +10,7 @@ public class TransaccionConHandle {
         this.tx = tx;
         this.handle = handle;
     }
+
     public Transaccion Transaccion() {
         return this.tx;
     }
@@ -20,5 +23,4 @@ public class TransaccionConHandle {
     public int compareTo(TransaccionConHandle otra) {
         return this.tx.compareTo(otra.tx);
     }
-    
 }

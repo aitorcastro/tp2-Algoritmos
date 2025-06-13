@@ -74,8 +74,9 @@ public class ListaEnlazada<T> {
         return ultimo.dato;
     }
 
-    public void eliminar(HandleLista handle) {
+    public T eliminar(HandleLista handle) {
         //throw new UnsupportedOperationException("No implementada aun");
+        T eliminado = handle.obtenerValor();
         if (longitud == 1){
             primero = null;
             ultimo = null;
@@ -95,6 +96,7 @@ public class ListaEnlazada<T> {
         }
         longitud--;
         handle.nodo = null;
+        return eliminado;
     }
 
     private class ListaIterador implements Iterador<T> {
