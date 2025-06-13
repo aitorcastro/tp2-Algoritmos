@@ -31,19 +31,19 @@ public class Berretacoin {
         throw new UnsupportedOperationException("Implementar!");
     }
 
-    public Transaccion txMayorValorUltimoBloque(){
-        throw new UnsupportedOperationException("Implementar!");
+    public Transaccion txMayorValorUltimoBloque(){    // H  E  C  H  O
+        return berretacoin.Ultimo().TxMayorMonto();
     }
 
-    public Transaccion[] txUltimoBloque(){
+    public Transaccion[] txUltimoBloque(){           // H  E  C  H  O
         return berretacoin.Ultimo().TxsEnLista(); 
     }
 
-    public int maximoTenedor(){
-        throw new UnsupportedOperationException("Implementar!");
+    public int maximoTenedor(){                     // H  E  C  H  O  
+        return usuariosPorMonto.proximo().Id();
     }
 
-    public int montoMedioUltimoBloque(){
+    public int montoMedioUltimoBloque(){            // H  E  C  H  O
         return this.berretacoin.Ultimo().MontoMedio();
     }
 
