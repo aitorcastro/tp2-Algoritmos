@@ -27,9 +27,8 @@ public class Berretacoin {
         handlesUsuarios = usuariosPorMonto.heapify(usuarios);
     }
 
-    public void agregarBloque(Transaccion[] transacciones){      
-        //throw new UnsupportedOperationException("Implementar!");
-        
+    public void agregarBloque(Transaccion[] transacciones){ 
+        throw new UnsupportedOperationException("Implementar!");
     }
 
     public Transaccion txMayorValorUltimoBloque(){
