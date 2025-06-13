@@ -25,11 +25,18 @@ public class Bloque {
 
     public Transaccion[] TxsEnLista(){
         Transaccion[] lista = new Transaccion[this.cant_txs] ;
+        Iterador<Transaccion> it = this.Iterador();
         int i = 0;
-        while ( bloque.Ultimo() == null ) {
-            lista[i] = bloque.obtener(i);
+        while ( it.haySiguiente()) {
+            lista[i] = it.siguiente();
+            i = i +1 ;
         }
         return lista;
+    }
+
+
+    public Transaccion TxMayorMonto(){
+        return txXMontos.proximo().Transaccion();
     }
 
 
